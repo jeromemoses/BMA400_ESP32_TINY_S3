@@ -16,7 +16,6 @@ void setup()
   bma400.parameter.outputDataRate = 0x05;             //Choose measurement range
   bma400.parameter.oversamplingRate = 0x03;             //Choose measurement samplingrate
 
-
   //CHECK THE CHIP ID
   Serial.print(F("Communication with BMA400:\t"));
   if (bma400.init()==0x90)
@@ -130,23 +129,23 @@ void loop()
   Serial.printf("\n\n\n%f \t %f \t %f \t\n\n\n",x,y,z);
   // Serial.printf("/t %s /t %s /t",db_date,db_time);
  
-  if((x <= 0) && (z >= 700)) 
-    {
-      //Serial.print('\t');
-      //Serial.println("Flat \n");
-      myStatus = "Flat";
-    }
-  if((x < 0) && (z <= 700) ) 
-    {
-      //Serial.print('\t');
-      //Serial.println("Right \n");
-      myStatus = "right";      
-    }
-  if((x>=700) && (z<700) ) 
-    {
-      //Serial.print('\t');
-      //Serial.println("Left \n");
-      myStatus = "left";
-    }
+  // if((x >= 500) && (z <= 700)) 
+  //   {
+  //     Serial.print('\t');
+  //     Serial.println("sitting straight \n");
+  //     myStatus = "sitting straight";
+  //   }
+  // if((x < 0) && (z <= 700) ) 
+  //   {
+  //     Serial.print('\t');
+  //     Serial.println("Right \n");
+  //     myStatus = "right";      
+  //   }
+  // if((x>=700) && (z<700) ) 
+  //   {
+  //     Serial.print('\t');
+  //     Serial.println("Left \n");
+  //     myStatus = "left";
+  //   }
 
 }
