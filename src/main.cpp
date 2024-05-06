@@ -126,7 +126,7 @@ void loop()
   y = bma400.parameter.acc_y;
   z = bma400.parameter.acc_z;
 
-  Serial.printf("\n\n\n%f \t %f \t %f \t\n\n\n",x,y,z);
+  Serial.printf("%f \t %f \t %f \t\n",x,y,z);
   // Serial.printf("/t %s /t %s /t",db_date,db_time);
  
   // if((x >= 500) && (z <= 700)) 
